@@ -1,0 +1,16 @@
+D:\Projects\Pathfinding\obj\Debug\net5.0\Pathfinding.csproj.AssemblyReference.cache
+D:\Projects\Pathfinding\obj\Debug\net5.0\Pathfinding.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\Pathfinding\obj\Debug\net5.0\Pathfinding.AssemblyInfoInputs.cache
+D:\Projects\Pathfinding\obj\Debug\net5.0\Pathfinding.AssemblyInfo.cs
+D:\Projects\Pathfinding\obj\Debug\net5.0\Pathfinding.csproj.CoreCompileInputs.cache
+D:\Projects\Pathfinding\bin\Debug\net5.0\Pathfinding.exe
+D:\Projects\Pathfinding\bin\Debug\net5.0\Pathfinding.deps.json
+D:\Projects\Pathfinding\bin\Debug\net5.0\Pathfinding.runtimeconfig.json
+D:\Projects\Pathfinding\bin\Debug\net5.0\Pathfinding.runtimeconfig.dev.json
+D:\Projects\Pathfinding\bin\Debug\net5.0\Pathfinding.dll
+D:\Projects\Pathfinding\bin\Debug\net5.0\ref\Pathfinding.dll
+D:\Projects\Pathfinding\bin\Debug\net5.0\Pathfinding.pdb
+D:\Projects\Pathfinding\obj\Debug\net5.0\Pathfinding.dll
+D:\Projects\Pathfinding\obj\Debug\net5.0\ref\Pathfinding.dll
+D:\Projects\Pathfinding\obj\Debug\net5.0\Pathfinding.pdb
+D:\Projects\Pathfinding\obj\Debug\net5.0\Pathfinding.genruntimeconfig.cache
