@@ -3,21 +3,26 @@ using System.Collections.Generic;
 
 namespace Pathfinding
 {
-    public class AStar
+    public class Pathfinder
     {
-        public List<IPathfindingNode> path => _path;
+        public List<IPathfindingNode> path => _pathBuilder.path;
 
         private List<IPathfindingNode> _openSet;
         private List<IPathfindingNode> _closedSet;
-        private List<IPathfindingNode> _path;
         private List<IPathfindingNode> _nodesToReset;
-        private IPathfindingNode _goal;
         private IPathfindingNode _currentNode;
+        private IPathfindingNode _goal;
         private IPathfindingNode _currentNodeNeighbour;
+        private PathBuilder _pathBuilder;
         
         private float _tempG;
         private bool _newPathDiscovered;
         
+        public Pathfinder()
+        {
+            _pathBuilder = new PathBuilder();
+        }
+
         public void DoAStar(IPathfindingNode start, IPathfindingNode goal)
         {
             ResetFields();
@@ -39,7 +44,7 @@ namespace Pathfinding
 
                 if (_currentNode == _goal)
                 {
-                    AddNodesToPath();
+                    _pathBuilder.AddNodesToPath();
                     break;
                 }
 
@@ -76,10 +81,8 @@ namespace Pathfinding
         private void CheckCurrentNodeNeighborG()
         {
             if (_openSet.Contains(_currentNodeNeighbour))
-            {
                 if (_tempG < _currentNodeNeighbour.g)
                     AssignNewCurrentNodeNeighborGAndPath();
-            }
             else
             {
                 AssignNewCurrentNodeNeighborGAndPath();
@@ -98,17 +101,6 @@ namespace Pathfinding
             _currentNodeNeighbour.h = CalculateHeuristic(_currentNodeNeighbour, _goal);
             _currentNodeNeighbour.f = _currentNodeNeighbour.g + _currentNodeNeighbour.h;
             _currentNodeNeighbour.parent = _currentNode;
-        }
-
-        private void AddNodesToPath()
-        {
-            IPathfindingNode endNode = _currentNode;
-            _path.Add(endNode);
-            while (endNode.parent != null)
-            {
-                _path.Add(endNode.parent);
-                endNode = endNode.parent;
-            }
         }
 
         private void GetNearestToTheGoalNode()
@@ -141,7 +133,7 @@ namespace Pathfinding
         {
             _openSet = new List<IPathfindingNode>();
             _closedSet = new List<IPathfindingNode>();
-            _path = new List<IPathfindingNode>();
+            _pathBuilder.ResetPath();
             _nodesToReset = new List<IPathfindingNode>();
         }
 
