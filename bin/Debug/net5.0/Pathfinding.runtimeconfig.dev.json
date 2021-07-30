@@ -1,8 +1,0 @@
-{
-  "runtimeOptions": {
-    "additionalProbingPaths": [
-      "C:\\Users\\MightyBeast\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\MightyBeast\\.nuget\\packages"
-    ]
-  }
-}
